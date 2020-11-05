@@ -9,7 +9,9 @@
  */
 
 import React from 'react';
-import {StyleSheet, View, Text, StatusBar} from 'react-native';
+import {StyleSheet, View, StatusBar} from 'react-native';
+
+import Layout from './components/Layout';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -18,7 +20,7 @@ const App: React.FC = () => {
     <>
       <StatusBar barStyle="light-content" />
       <View style={styles.container}>
-        <Text style={styles.title}>Hello</Text>
+        <Layout />
       </View>
     </>
   );
@@ -29,10 +31,11 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#111',
+    backgroundColor: '#162736',
   },
   title: {
     color: '#fff',
+    fontSize: 32,
   },
 });
 
