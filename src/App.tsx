@@ -18,7 +18,7 @@ const App: React.FC = () => {
     <>
       <StatusBar barStyle="light-content" />
       <View style={styles.container}>
-        <Text style={styles.title}>Hello World</Text>
+        <Text style={styles.title}>Hello</Text>
       </View>
     </>
   );
