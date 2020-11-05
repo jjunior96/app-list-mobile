@@ -6,3 +6,8 @@ export const Layout = styled.View`
   padding: 12px 20px;
   align-items: center;
 `;
+
+export const FlatListContainer = styled.FlatList`
+  width: 100%;
+  flex: 1;
+`;
