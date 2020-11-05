@@ -58,11 +58,9 @@ yarn start
 
 ## Construído utilizando <a name = "built_using"></a>
 
-- FrontEnd (Web):
-  - ReacJS;
-  - React Router DOM;
+- Mobile:
+  - React Native;
   - Styled-Components;
-  - Leaflet e react-leaflet;
 
 ## Autores <a name = "autores"></a>
 
