@@ -3,11 +3,11 @@
 <p align="center"><i>App List</i></p>
 </p>
 <p align="center">
-<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/jjunior96/app-list-mobile?color=%2314C3D6">
-<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/jjunior96/app-list-mobile?color=%2314C3D6&logoColor=%23FFD666" />
-<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/jjunior96/app-list-mobile?color=%2314C3D6">
+<img alt="GitHub top language" src="https://img.shields.io/github/languages/top/jjunior96/app-list-mobile?color=%23FA8231">
+<img alt="GitHub repo size" src="https://img.shields.io/github/repo-size/jjunior96/app-list-mobile?color=%23FA8231&logoColor=%23FFD666" />
+<img alt="GitHub language count" src="https://img.shields.io/github/languages/count/jjunior96/app-list-mobile?color=%23FA8231">
 
-<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jjunior96/app-list-mobile?color=%2314C3D6">
+<img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/jjunior96/app-list-mobile?color=%23FA8231">
 </p>
 
 ## Tabela de conteúdos
@@ -67,3 +67,5 @@ yarn start
 - Site: [devjuniorplus.com.br](https://devjuniorplus.com.br/)
 - Github: [@jjunior96](https://github.com/jjunior96)
 - LinkedIn: [@JuniorAlves](https://www.linkedin.com/in/junior-alves-b66a10127)
+
+#FA8231
