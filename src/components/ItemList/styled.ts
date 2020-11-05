@@ -1,7 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  width: 100%;
+  width: 86%;
   background-color: #203449;
   padding: 16px;
   border-radius: 8px;
@@ -16,28 +16,29 @@ export const ItemsLeft = styled.View`
   align-items: center;
 `;
 
-export const ItemImage = styled.View`
+export const ItemImage = styled.Image`
   height: 48px;
   width: 48px;
-  background-color: red;
+  background-color: transparent;
   border-radius: 8px;
 `;
 
 export const ItemInfo = styled.View`
-  margin-left: 8px;
+  margin-left: 12px;
 `;
 
 export const ItemName = styled.Text`
   color: #fff;
   font-size: 18px;
-
+  font-family: Roboto;
   margin-bottom: 4px;
   font-weight: bold;
 `;
 
 export const ItemDescription = styled.Text`
   color: #fff;
-  font-size: 14px;
+  font-size: 16px;
+  font-family: Roboto;
 `;
 
 export const ItemCheck = styled.View`

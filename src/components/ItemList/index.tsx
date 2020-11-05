@@ -1,5 +1,6 @@
 import React from 'react';
-// import {Text} from 'react-native';
+
+import {Items} from './Items';
 
 import * as S from './styled';
 
@@ -7,10 +8,12 @@ const ItemList: React.FC = () => {
   return (
     <S.Container>
       <S.ItemsLeft>
-        <S.ItemImage />
+        <S.ItemImage source={Items[0].path} />
         <S.ItemInfo>
-          <S.ItemName>Arroz</S.ItemName>
-          <S.ItemDescription>2 Kg - R$ 10,50</S.ItemDescription>
+          <S.ItemName>{Items[0].name}</S.ItemName>
+          <S.ItemDescription>
+            2 {Items[0].unity} - R$ {Items[0].price}
+          </S.ItemDescription>
         </S.ItemInfo>
       </S.ItemsLeft>
 
