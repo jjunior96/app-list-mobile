@@ -1,5 +1,5 @@
 import React from 'react';
-import {SafeAreaView, FlatList} from 'react-native';
+import {SafeAreaView} from 'react-native';
 
 import {Items} from '../ItemList/Items';
 
@@ -16,7 +16,7 @@ const Layout: React.FC = () => {
       <SafeAreaView />
       <S.Layout>
         <Title />
-        <FlatList
+        <S.FlatListContainer
           data={Items}
           renderItem={renderItem}
           keyExtractor={(item) => item.id}
