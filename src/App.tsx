@@ -11,7 +11,8 @@
 import React from 'react';
 import {StyleSheet, View, StatusBar} from 'react-native';
 
-import Layout from './components/Layout';
+// import Layout from './components/Layout';
+import Home from './pages/Home';
 
 declare const global: {HermesInternal: null | {}};
 
@@ -20,7 +21,7 @@ const App: React.FC = () => {
     <>
       <StatusBar barStyle="light-content" />
       <View style={styles.container}>
-        <Layout />
+        <Home />
       </View>
     </>
   );
