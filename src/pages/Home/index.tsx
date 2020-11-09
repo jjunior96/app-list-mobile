@@ -15,7 +15,7 @@ const Layout: React.FC = () => {
     <>
       <SafeAreaView />
       <S.Layout>
-        <Title />
+        <Title text="Extra Forte" />
         <S.FlatListContainer
           data={Items}
           renderItem={renderItem}
