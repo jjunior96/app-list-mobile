@@ -4,6 +4,9 @@ import {SafeAreaView} from 'react-native';
 import Title from '../../components/Title';
 import Button from '../../components/Button';
 import Input from '../../components/Input';
+import Image from '../../components/Image';
+
+import Icon from 'react-native-vector-icons/Feather';
 
 import * as S from './styled';
 
@@ -19,7 +22,18 @@ const AddItem: React.FC = () => {
         <Input name="quantity" placeholder="Quantidade" />
         <Input name="unity" placeholder="Unidade" />
 
-        <Button onPress={() => console.log('deu')}>Confirmar</Button>
+        <S.ImageContainer>
+          <Image />
+        </S.ImageContainer>
+
+        <S.AddCart>
+          <Icon name="shopping-cart" size={24} color="#62707f" />
+          <S.AddCartText>Add Carrinho</S.AddCartText>
+        </S.AddCart>
+
+        <S.ButtonContainer>
+          <Button onPress={() => console.log('deu')}>Confirmar</Button>
+        </S.ButtonContainer>
       </S.Container>
     </>
   );
