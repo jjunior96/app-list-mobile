@@ -2,8 +2,12 @@ import React from 'react';
 
 import * as S from './styled';
 
-const Title: React.FC = () => {
-  return <S.Title>Extra Forte</S.Title>;
+interface TitleProps {
+  text: string;
+}
+
+const Title: React.FC<TitleProps> = ({text}) => {
+  return <S.Title>{text}</S.Title>;
 };
 
 export default Title;
