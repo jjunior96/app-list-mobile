@@ -11,16 +11,16 @@
 import React from 'react';
 import {StyleSheet, View, StatusBar} from 'react-native';
 
-import Layout from './components/Layout';
-
-declare const global: {HermesInternal: null | {}};
+// import Layout from './components/Layout';
+// import Home from './pages/Home';
+import AddItem from './pages/AddItem';
 
 const App: React.FC = () => {
   return (
     <>
       <StatusBar barStyle="light-content" />
       <View style={styles.container}>
-        <Layout />
+        <AddItem />
       </View>
     </>
   );
