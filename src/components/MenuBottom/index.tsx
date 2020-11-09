@@ -21,7 +21,7 @@ const MenuBottom: React.FC = () => {
       </S.ItemContainer>
 
       <S.AddButton>
-        <Image source={PluslIcon} style={{width: 24, height: 24}} />
+        <Image source={PluslIcon} style={{width: 20, height: 20}} />
       </S.AddButton>
 
       <S.ItemContainer>

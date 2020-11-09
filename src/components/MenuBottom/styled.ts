@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import {RectButton} from 'react-native-gesture-handler';
 
 export const Container = styled.View`
   padding-top: 8px;
@@ -44,10 +45,10 @@ export const QuantityValue = styled.Text`
   color: #20c970;
 `;
 
-export const AddButton = styled.View`
+export const AddButton = styled(RectButton)`
   width: 64px;
   height: 64px;
-  border-radius: 50px;
+  border-radius: 30px;
   background-color: #fa8231;
   align-items: center;
   justify-content: center;
