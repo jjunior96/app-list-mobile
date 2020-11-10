@@ -1,5 +1,6 @@
+/* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {SafeAreaView} from 'react-native';
+import {Platform, SafeAreaView} from 'react-native';
 
 import Title from '../../components/Title';
 import Button from '../../components/Button';
@@ -16,51 +17,59 @@ const AddItem: React.FC = () => {
   return (
     <>
       <SafeAreaView />
-      <S.Container>
-        <Title text="Novo Item" />
+      {/* <S.KeyboardAvoidingView
+        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
+        enabled> */}
+      <S.ScrollViewContainer
+        contentContainerStyle={{flex: 1, width: '100%'}}
+        keyboardShouldPersistTaps="handled">
+        <S.Container>
+          <Title text="Novo Item" />
 
-        <Input name="name" placeholder="Nome" />
-        <S.Line>
-          <S.LineItem>
-            <S.InputPriceContainer>
-              <S.InputPrice
-                placeholder="Preço"
-                keyboardAppearance="dark"
-                placeholderTextColor="#62707F"
-                type="currency"
-                locale="BRL"
-                currency="BRL"
-                value={value}
-                onUpdate={(value) => setValue(value)}
+          <Input name="name" placeholder="Nome" />
+          <S.Line>
+            <S.LineItem>
+              <S.InputPriceContainer>
+                <S.InputPrice
+                  placeholder="Preço"
+                  keyboardAppearance="dark"
+                  placeholderTextColor="#62707F"
+                  type="currency"
+                  locale="BRL"
+                  currency="BRL"
+                  value={value}
+                  onUpdate={(value) => setValue(value)}
+                />
+              </S.InputPriceContainer>
+            </S.LineItem>
+
+            <S.Space />
+
+            <S.LineItem>
+              <Input
+                name="quantity"
+                placeholder="Quantidade"
+                keyboardType="numeric"
               />
-            </S.InputPriceContainer>
-          </S.LineItem>
+            </S.LineItem>
+          </S.Line>
+          <Input name="unity" placeholder="Unidade" />
 
-          <S.Space />
+          <S.ImageContainer>
+            <Image />
+          </S.ImageContainer>
 
-          <S.LineItem>
-            <Input
-              name="quantity"
-              placeholder="Quantidade"
-              keyboardType="numeric"
-            />
-          </S.LineItem>
-        </S.Line>
-        <Input name="unity" placeholder="Unidade" />
+          <S.AddCart>
+            <Icon name="shopping-cart" size={24} color="#62707f" />
+            <S.AddCartText>Add Carrinho</S.AddCartText>
+          </S.AddCart>
 
-        <S.ImageContainer>
-          <Image />
-        </S.ImageContainer>
-
-        <S.AddCart>
-          <Icon name="shopping-cart" size={24} color="#62707f" />
-          <S.AddCartText>Add Carrinho</S.AddCartText>
-        </S.AddCart>
-
-        <S.ButtonContainer>
-          <Button onPress={() => console.log('deu')}>Confirmar</Button>
-        </S.ButtonContainer>
-      </S.Container>
+          <S.ButtonContainer>
+            <Button onPress={() => console.log('deu')}>Confirmar</Button>
+          </S.ButtonContainer>
+        </S.Container>
+      </S.ScrollViewContainer>
+      {/* </S.KeyboardAvoidingView> */}
     </>
   );
 };

@@ -1,6 +1,16 @@
 import styled from 'styled-components/native';
 import NumericInput from '@wwdrew/react-native-numeric-textinput';
 
+export const KeyboardAvoidingView = styled.KeyboardAvoidingView`
+  flex: 1;
+  width: 100%;
+`;
+
+export const ScrollViewContainer = styled.ScrollView`
+  width: 100%;
+  flex: 1;
+`;
+
 export const Container = styled.View`
   width: 100%;
   flex: 1;
