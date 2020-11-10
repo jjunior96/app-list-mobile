@@ -37,3 +37,18 @@ export const ButtonContainer = styled.View`
   margin-bottom: 64px;
   bottom: 0;
 `;
+
+export const Line = styled.View`
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+`;
+
+export const LineItem = styled.View`
+  max-width: 100%;
+  flex: 1;
+`;
+
+export const Space = styled.View`
+  width: 16px;
+`;
