@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {SafeAreaView} from 'react-native';
 
 import Title from '../../components/Title';
@@ -11,6 +11,8 @@ import Icon from 'react-native-vector-icons/Feather';
 import * as S from './styled';
 
 const AddItem: React.FC = () => {
+  const [value, setValue] = useState();
+
   return (
     <>
       <SafeAreaView />
@@ -18,8 +20,32 @@ const AddItem: React.FC = () => {
         <Title text="Novo Item" />
 
         <Input name="name" placeholder="Nome" />
-        <Input name="price" placeholder="Preço" />
-        <Input name="quantity" placeholder="Quantidade" />
+        <S.Line>
+          <S.LineItem>
+            <S.InputPriceContainer>
+              <S.InputPrice
+                placeholder="Preço"
+                keyboardAppearance="dark"
+                placeholderTextColor="#62707F"
+                type="currency"
+                locale="BRL"
+                currency="BRL"
+                value={value}
+                onUpdate={(value) => setValue(value)}
+              />
+            </S.InputPriceContainer>
+          </S.LineItem>
+
+          <S.Space />
+
+          <S.LineItem>
+            <Input
+              name="quantity"
+              placeholder="Quantidade"
+              keyboardType="numeric"
+            />
+          </S.LineItem>
+        </S.Line>
         <Input name="unity" placeholder="Unidade" />
 
         <S.ImageContainer>
