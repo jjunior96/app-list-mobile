@@ -18,8 +18,21 @@ const AddItem: React.FC = () => {
         <Title text="Novo Item" />
 
         <Input name="name" placeholder="Nome" />
-        <Input name="price" placeholder="Preço" />
-        <Input name="quantity" placeholder="Quantidade" />
+        <S.Line>
+          <S.LineItem>
+            <Input name="price" placeholder="Preço" keyboardType="numeric" />
+          </S.LineItem>
+
+          <S.Space />
+
+          <S.LineItem>
+            <Input
+              name="quantity"
+              placeholder="Quantidade"
+              keyboardType="numeric"
+            />
+          </S.LineItem>
+        </S.Line>
         <Input name="unity" placeholder="Unidade" />
 
         <S.ImageContainer>
