@@ -1,4 +1,5 @@
 import styled from 'styled-components/native';
+import NumericInput from '@wwdrew/react-native-numeric-textinput';
 
 export const Container = styled.View`
   width: 100%;
@@ -51,4 +52,20 @@ export const LineItem = styled.View`
 
 export const Space = styled.View`
   width: 16px;
+`;
+
+export const InputPriceContainer = styled.View`
+  width: 100%;
+  height: 60px;
+  padding: 0 16px;
+  background-color: #203449;
+  border-radius: 12px;
+  margin-bottom: 16px;
+`;
+
+export const InputPrice = styled(NumericInput)`
+  flex: 1;
+  color: #fff;
+  font-size: 16px;
+  font-family: 'Roboto';
 `;
