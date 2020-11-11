@@ -9,6 +9,8 @@ export const Container = styled.View`
   align-items: center;
   justify-content: space-between;
   margin-bottom: 16px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  opacity: 0.4;
 `;
 
 export const ItemsLeft = styled.View`
@@ -46,4 +48,7 @@ export const ItemCheck = styled.View`
   height: 20px;
   border: 2px solid #20c970;
   border-radius: 50px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 0 2px;
 `;

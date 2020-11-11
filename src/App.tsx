@@ -1,42 +1,17 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * Generated with the TypeScript template
- * https://github.com/react-native-community/react-native-template-typescript
- *
- * @format
- */
-
+import 'react-native-gesture-handler';
 import React from 'react';
-import {StyleSheet, View, StatusBar} from 'react-native';
+import {StatusBar} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
 
-// import Layout from './components/Layout';
-// import Home from './pages/Home';
-import AddItem from './pages/AddItem';
+import Routes from './routes';
 
 const App: React.FC = () => {
   return (
-    <>
+    <NavigationContainer>
       <StatusBar barStyle="light-content" />
-      <View style={styles.container}>
-        <AddItem />
-      </View>
-    </>
+      <Routes />
+    </NavigationContainer>
   );
 };
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    backgroundColor: '#162736',
-  },
-  title: {
-    color: '#fff',
-    fontSize: 32,
-  },
-});
 
 export default App;

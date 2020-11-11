@@ -1,10 +1,5 @@
-/* eslint-disable react-native/no-inline-styles */
 import React from 'react';
-import {Image} from 'react-native';
-
-import TotalIcon from '../../assets/total-icon.png';
-import PluslIcon from '../../assets/plus-icon.png';
-import CartlIcon from '../../assets/cart-icon.png';
+import Icon from 'react-native-vector-icons/Feather';
 
 import * as S from './styled';
 
@@ -12,7 +7,7 @@ const MenuBottom: React.FC = () => {
   return (
     <S.Container>
       <S.ItemContainer>
-        <S.Image source={TotalIcon} />
+        <Icon name="list" size={38} color="#20c970" />
 
         <S.ItemInfo>
           <S.QuantityTitle>Total (6)</S.QuantityTitle>
@@ -21,15 +16,15 @@ const MenuBottom: React.FC = () => {
       </S.ItemContainer>
 
       <S.AddButton>
-        <Image source={PluslIcon} style={{width: 20, height: 20}} />
+        <Icon name="plus" size={38} color="#fff" />
       </S.AddButton>
 
       <S.ItemContainer>
-        <S.Image source={CartlIcon} />
+        <Icon name="shopping-cart" size={32} color="#20c970" />
 
         <S.ItemInfo>
-          <S.QuantityTitle>Carrinho (1)</S.QuantityTitle>
-          <S.QuantityValue>R$ 21,00</S.QuantityValue>
+          <S.QuantityTitle>Carrinho (6)</S.QuantityTitle>
+          <S.QuantityValue>R$ 68,08</S.QuantityValue>
         </S.ItemInfo>
       </S.ItemContainer>
     </S.Container>

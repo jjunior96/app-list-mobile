@@ -1,4 +1,5 @@
 import React from 'react';
+import Icon from 'react-native-vector-icons/Feather';
 
 import {Items} from './Items';
 
@@ -17,7 +18,9 @@ const ItemList: React.FC = () => {
         </S.ItemInfo>
       </S.ItemsLeft>
 
-      <S.ItemCheck />
+      <S.ItemCheck>
+        <Icon name="check" size={18} color="#20c970" />
+      </S.ItemCheck>
     </S.Container>
   );
 };
