@@ -23,8 +23,8 @@ const MenuBottom: React.FC = () => {
         <Icon name="shopping-cart" size={32} color="#20c970" />
 
         <S.ItemInfo>
-          <S.QuantityTitle>Carrinho (1)</S.QuantityTitle>
-          <S.QuantityValue>R$ 21,00</S.QuantityValue>
+          <S.QuantityTitle>Carrinho (6)</S.QuantityTitle>
+          <S.QuantityValue>R$ 68,08</S.QuantityValue>
         </S.ItemInfo>
       </S.ItemContainer>
     </S.Container>
