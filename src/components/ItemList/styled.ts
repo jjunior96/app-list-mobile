@@ -1,6 +1,10 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
+interface ContainerProps {
+  check?: boolean;
+}
+
+export const Container = styled.View<ContainerProps>`
   width: 100%;
   background-color: #203449;
   padding: 16px;
@@ -10,7 +14,7 @@ export const Container = styled.View`
   justify-content: space-between;
   margin-bottom: 16px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* opacity: 0.4; */
+  opacity: ${(props) => (props.check === true ? 0.4 : 1)};
 `;
 
 export const ItemsLeft = styled.View`
