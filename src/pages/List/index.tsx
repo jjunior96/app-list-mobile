@@ -1,6 +1,6 @@
 import React from 'react';
 import {SafeAreaView} from 'react-native';
-// import {useNavigation} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 import {Items} from '../../components/ItemList/Items';
 
@@ -11,7 +11,7 @@ import * as S from './styled';
 
 const List: React.FC = () => {
   const renderItem = ({}) => <ItemList />;
-  // const navigation = useNavigation();
+  const navigation = useNavigation();
 
   return (
     <>
@@ -28,7 +28,7 @@ const List: React.FC = () => {
           legacyImplementation={false}
         />
       </S.List>
-      <MenuBottom />
+      <MenuBottom navigation={navigation} />
     </>
   );
 };
