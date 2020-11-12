@@ -10,7 +10,7 @@ import MenuBottom from '../../components/MenuBottom';
 import * as S from './styled';
 
 const Cart: React.FC = () => {
-  const renderItem = ({}) => <ItemList />;
+  const renderItem = ({}) => <ItemList check />;
   const navigation = useNavigation();
 
   return (
