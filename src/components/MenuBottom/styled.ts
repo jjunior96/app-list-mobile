@@ -17,7 +17,7 @@ export const Container = styled.View`
   height: 100px;
 `;
 
-export const ItemContainer = styled.View`
+export const ItemContainer = styled(RectButton)`
   width: 120px;
   flex-direction: row;
   align-items: center;
