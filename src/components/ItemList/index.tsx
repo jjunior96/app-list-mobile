@@ -5,9 +5,13 @@ import {Items} from './Items';
 
 import * as S from './styled';
 
-const ItemList: React.FC = () => {
+interface ItemListProps {
+  check?: boolean;
+}
+
+const ItemList: React.FC<ItemListProps> = ({check}) => {
   return (
-    <S.Container>
+    <S.Container check={check}>
       <S.ItemsLeft>
         <S.ItemImage source={Items[0].path} />
         <S.ItemInfo>
