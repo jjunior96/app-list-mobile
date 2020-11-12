@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {Platform, SafeAreaView} from 'react-native';
+import {SafeAreaView} from 'react-native';
 import Icon from 'react-native-vector-icons/Feather';
 
 import Title from '../../components/Title';
@@ -9,16 +9,15 @@ import Input from '../../components/Input';
 import Image from '../../components/Image';
 
 import * as S from './styled';
+import {useNavigation} from '@react-navigation/native';
 
 const AddItem: React.FC = () => {
   const [value, setValue] = useState();
+  const navigation = useNavigation();
 
   return (
     <>
       <SafeAreaView />
-      {/* <S.KeyboardAvoidingView
-        behavior={Platform.OS === 'ios' ? 'padding' : undefined}
-        enabled> */}
       <S.ScrollViewContainer
         contentContainerStyle={{flex: 1, width: '100%'}}
         keyboardShouldPersistTaps="handled">
@@ -64,11 +63,12 @@ const AddItem: React.FC = () => {
           </S.AddCart>
 
           <S.ButtonContainer>
-            <Button onPress={() => console.log('deu')}>Confirmar</Button>
+            <Button onPress={() => navigation.navigate('List')}>
+              Confirmar
+            </Button>
           </S.ButtonContainer>
         </S.Container>
       </S.ScrollViewContainer>
-      {/* </S.KeyboardAvoidingView> */}
     </>
   );
 };

@@ -13,7 +13,8 @@ const AuthRoutes: React.FC = () => {
       screenOptions={{
         headerShown: false,
         cardStyle: {backgroundColor: '#162736'},
-      }}>
+      }}
+      initialRouteName="List">
       <Auth.Screen name="List" component={List} />
       <Auth.Screen name="Cart" component={Cart} />
       <Auth.Screen name="AddItem" component={AddItem} />
