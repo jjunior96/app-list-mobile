@@ -1,10 +1,11 @@
+import {RectButton} from 'react-native-gesture-handler';
 import styled from 'styled-components/native';
 
 interface ContainerProps {
   check?: boolean;
 }
 
-export const Container = styled.View<ContainerProps>`
+export const Container = styled(RectButton)<ContainerProps>`
   width: 100%;
   background-color: #203449;
   padding: 16px;
