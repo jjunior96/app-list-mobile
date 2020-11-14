@@ -1,10 +1,14 @@
 import React from 'react';
-import {NavigationProp} from '@react-navigation/native';
+import {CompositeNavigationProp} from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/Feather';
+
+interface MenuBottomProps {
+  navigation: CompositeNavigationProp;
+}
 
 import * as S from './styled';
 
-const MenuBottom: React.FC = ({navigation}) => {
+const MenuBottom: React.FC<MenuBottomProps> = ({navigation}) => {
   return (
     <S.Container>
       <S.ItemContainer onPress={() => navigation.navigate('List')}>
