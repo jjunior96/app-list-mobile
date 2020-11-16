@@ -19,7 +19,7 @@ const AddItem: React.FC = () => {
   const navigation = useNavigation();
 
   const handleAddItem = useCallback((data: object) => {
-    console.log('entrou na funcoa');
+    console.log('entrou na funcao');
   }, []);
 
   return (
