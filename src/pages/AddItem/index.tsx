@@ -22,6 +22,14 @@ const AddItem: React.FC = () => {
     console.log('entrou na funcao');
   }, []);
 
+  const handleConfirm = useCallback(
+    (data: object) => {
+      handleAddItem(data);
+      navigation.navigate('List');
+    },
+    [handleAddItem, navigation],
+  );
+
   return (
     <>
       <SafeAreaView />
@@ -31,7 +39,10 @@ const AddItem: React.FC = () => {
         <S.Container>
           <Title text="Novo Item" />
 
-          <Form ref={formRef} onSubmit={handleAddItem}>
+          <Form
+            ref={formRef}
+            onSubmit={handleConfirm}
+            style={{flex: 1, width: '100%', alignItems: 'center'}}>
             <Input name="name" placeholder="Nome" />
             <S.Line>
               <S.LineItem>
@@ -71,7 +82,6 @@ const AddItem: React.FC = () => {
             </S.AddCart>
 
             <S.ButtonContainer>
-              {/* <Button onPress={() => navigation.navigate('List')}> */}
               <Button onPress={() => formRef.current?.submitForm()}>
                 Confirmar
               </Button>
