@@ -16,10 +16,15 @@ import {useNavigation} from '@react-navigation/native';
 const AddItem: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const [value, setValue] = useState();
+  // const [name, setName] = useState();
+  // const [price, setPrice] = useState();
+  // const [quantity, setQuantity] = useState();
+  // const [unity, setUnity] = useState();
+  // const [selectValue, setSelectValue] = useState('l');
   const navigation = useNavigation();
 
   const handleAddItem = useCallback((data: object) => {
-    console.log('entrou na funcao');
+    console.log('entrou na funcao', data);
   }, []);
 
   const handleConfirm = useCallback(
@@ -55,7 +60,9 @@ const AddItem: React.FC = () => {
                     locale="BRL"
                     currency="BRL"
                     value={value}
-                    onUpdate={(value) => setValue(value)}
+                    onUpdate={(valueInput: React.SetStateAction<undefined>) =>
+                      setValue(valueInput)
+                    }
                   />
                 </S.InputPriceContainer>
               </S.LineItem>
