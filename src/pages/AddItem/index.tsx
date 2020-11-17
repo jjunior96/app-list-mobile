@@ -16,11 +16,24 @@ import {useNavigation} from '@react-navigation/native';
 const AddItem: React.FC = () => {
   const formRef = useRef<FormHandles>(null);
   const [value, setValue] = useState();
+  // const [name, setName] = useState();
+  // const [price, setPrice] = useState();
+  // const [quantity, setQuantity] = useState();
+  // const [unity, setUnity] = useState();
+  // const [selectValue, setSelectValue] = useState('l');
   const navigation = useNavigation();
 
   const handleAddItem = useCallback((data: object) => {
-    console.log('entrou na funcao');
+    console.log('entrou na funcao', data);
   }, []);
+
+  const handleConfirm = useCallback(
+    (data: object) => {
+      handleAddItem(data);
+      navigation.navigate('List');
+    },
+    [handleAddItem, navigation],
+  );
 
   return (
     <>
@@ -31,7 +44,10 @@ const AddItem: React.FC = () => {
         <S.Container>
           <Title text="Novo Item" />
 
-          <Form ref={formRef} onSubmit={handleAddItem}>
+          <Form
+            ref={formRef}
+            onSubmit={handleConfirm}
+            style={{flex: 1, width: '100%', alignItems: 'center'}}>
             <Input name="name" placeholder="Nome" />
             <S.Line>
               <S.LineItem>
@@ -44,7 +60,9 @@ const AddItem: React.FC = () => {
                     locale="BRL"
                     currency="BRL"
                     value={value}
-                    onUpdate={(value) => setValue(value)}
+                    onUpdate={(valueInput: React.SetStateAction<undefined>) =>
+                      setValue(valueInput)
+                    }
                   />
                 </S.InputPriceContainer>
               </S.LineItem>
@@ -71,7 +89,6 @@ const AddItem: React.FC = () => {
             </S.AddCart>
 
             <S.ButtonContainer>
-              {/* <Button onPress={() => navigation.navigate('List')}> */}
               <Button onPress={() => formRef.current?.submitForm()}>
                 Confirmar
               </Button>
