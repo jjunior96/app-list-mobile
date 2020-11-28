@@ -67,5 +67,3 @@ yarn start
 - Site: [devjuniorplus.com.br](https://devjuniorplus.com.br/)
 - Github: [@jjunior96](https://github.com/jjunior96)
 - LinkedIn: [@JuniorAlves](https://www.linkedin.com/in/junior-alves-b66a10127)
-
-#FA8231
