@@ -15,7 +15,7 @@
 - [Sobre](#about)
 - [Requisitos](#requisitos)
 - [Iniciando](#iniciando)
-- [Uso](#usage)
+- [Uso](#use)
 - [Construído utilizando](#built_using)
 - [Autores](#autores)
 
@@ -48,7 +48,7 @@ cd web
 yarn start
 ```
 
-## Uso
+## Uso <a name = "use"></a>
 
 ```shell
 yarn start
