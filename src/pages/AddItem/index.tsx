@@ -18,7 +18,7 @@ const AddItem: React.FC = () => {
   const [value, setValue] = useState();
   const navigation = useNavigation();
 
-  const handleAddItem = useCallback((data: object) => {
+  const handleAddItem = useCallback((_data: object) => {
     console.log('entrou na funcoa');
   }, []);
 
