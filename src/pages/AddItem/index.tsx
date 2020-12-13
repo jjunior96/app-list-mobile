@@ -23,6 +23,8 @@ const AddItem: React.FC = () => {
   // const [selectValue, setSelectValue] = useState('l');
   const navigation = useNavigation();
 
+  const handleAddItem = useCallback((_data: object) => {
+    console.log('entrou na funcoa');
   const handleAddItem = useCallback((data: object) => {
     console.log('entrou na funcao', data);
   }, []);
